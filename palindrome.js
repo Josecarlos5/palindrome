@@ -15,6 +15,6 @@ function isPalindrome(str) {
 // Examples
 console.log(isPalindrome("kayak")); // true
 console.log(isPalindrome("arara")); // true
-console.log(isPalindrome("cegid")); // false
+console.log(isPalindrome("musement")); // false
 console.log(isPalindrome("hello")); // false
 console.log(isPalindrome("Pat Nat Tan ; TAP?¿")); // true (example with spaces, uppercases and punctuation)
