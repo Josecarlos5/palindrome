@@ -1,20 +1,17 @@
-
-
 function isPalindrome(str) {
-
-    //  converting to lowercase without alphanumericos
     let cleanedStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
-
-    // Reverse 
     let reversedStr = cleanedStr.split('').reverse().join('');
-
-    // Check string equal to the reverse
     return cleanedStr === reversedStr;
 }
 
-// Examples
-console.log(isPalindrome("kayak")); // true
-console.log(isPalindrome("arara")); // true
-console.log(isPalindrome("musement")); // false
-console.log(isPalindrome("hello")); // false
-console.log(isPalindrome("Pat Nat Tan ; TAP?¿")); // true (example with spaces, uppercases and punctuation)
+// Input menu loop
+while (true) {
+    const userInput = prompt("Enter a string to check if it's a palindrome (or type 'exit' to quit):");
+
+    if (userInput === null || userInput.toLowerCase() === 'exit') {
+        break; // Exit the loop if the user cancels or types 'exit'
+    }
+
+    const result = isPalindrome(userInput);
+    alert(`"${userInput}" is ${result ? 'a palindrome' : 'not a palindrome'}.`);
+}
